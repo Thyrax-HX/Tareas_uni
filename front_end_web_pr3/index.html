@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Web Responsive</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- a) y b) Menú de navegación responsive (4 secciones) -->
+    <header class="header">
+        <div class="logo">MiSitioWeb</div>
+        
+        <!-- Toggle para menú hamburguesa solo con HTML y CSS -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- d) Banner principal con imagen -->
+    <section id="inicio" class="hero-banner">
+        <div class="banner-text">
+            <h1>Bienvenidos a Nuestro Sitio Web</h1>
+            <p>Diseño responsive usando únicamente HTML y CSS</p>
+        </div>
+    </section>
+
+    <!-- c) Sección Servicios -->
+    <section id="servicios" class="section">
+        <h2>Nuestros Servicios</h2>
+        <div class="cards-container">
+            <div class="card">
+                <h3>Diseño Web</h3>
+                <p>Creación de interfaces atractivas y adaptables a cualquier dispositivo.</p>
+            </div>
+            <div class="card">
+                <h3>Desarrollo Frontend</h3>
+                <p>Estructuración semántica y estilos modernos usando HTML5 y CSS3.</p>
+            </div>
+            <div class="card">
+                <h3>Optimización SEO</h3>
+                <p>Mejoramos el posicionamiento de tu sitio en motores de búsqueda.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- c) Sección Galería -->
+    <section id="galeria" class="section bg-alt">
+        <h2>Galería de Imágenes</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://picsum.photos/400/300?random=1" alt="Galería 1"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/400/300?random=2" alt="Galería 2"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/400/300?random=3" alt="Galería 3"></div>
+            <div class="gallery-item"><img src="https://picsum.photos/400/300?random=4" alt="Galería 4"></div>
+        </div>
+    </section>
+
+    <!-- e) Formulario simple y visualización de datos sin JS (Método GET/Target CSS) -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <p>Llena los datos del formulario y envía para ver el resumen abajo:</p>
+
+        <div class="contacto-container">
+            <!-- Formulario -->
+            <form action="#resultado" method="GET" class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="Nombre" required placeholder="Tu nombre">
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="Correo" required placeholder="tu@correo.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" id="direccion" name="Dirección" required placeholder="Tu dirección">
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="Mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Datos</button>
+            </form>
+
+            <!-- Área donde se muestran los datos al presionar Enviar (simulado vía URL/Target) -->
+            <div id="resultado" class="resultado-box">
+                <h3>Datos Ingresados / Enviados</h3>
+                <p class="instruccion-envio">Procesando datos enviados vía URL...</p>
+                
+                <!-- Mediante JS o CSS puro se muestra el área activa. 
+                     Aquí un contenedor visual que refleja los datos ingresados al hacer hover/focus o envío: -->
+                <div class="resumen-datos">
+                    <p><strong>Estado:</strong> ¡Formulario enviado correctamente!</p>
+                    <p><em>Los parámetros enviados se reflejan en la barra de direcciones (URL) mediante el método GET.</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 - Proyecto HTML y CSS Puro</p>
+    </footer>
+
+</body>
+</html>
